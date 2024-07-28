@@ -1,14 +1,55 @@
 body { 
     font-family: sans-serif;
-}
-body {
-    background-color: rebeccapurple;
-    color: white;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
 }
 
-a {
-    color:inherit;
+.container {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    font-size: 14px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    color: #444;
+}
+
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.button-item p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+}
+
+a, .button {
+    color: inherit;
     text-decoration: none;
+    margin: 5px;
+    display: inline-block;
 }
 
 a:hover,
@@ -18,42 +59,160 @@ a:focus {
 }
 
 .button {
-  display: inline-block;
-  background-color: rebeccapurple;
-  color: inherit;
-  font: inherit;
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 8px;
-  transition: 
-  color .5s linear,
-  background-color .5s linear;
+    font: inherit;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 6px 12px;
+    transition: 
+        color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+    position: relative;
+    font-size: 14px;
 }
 
 .button:hover,
-.button:focus
-.button:active {
-  text-decoration: none;  
-  background-color:white;
-  color: rebeccapurple;
+.button:focus {
+    text-decoration: none;  
+    background-color: #f0f0f0;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.secondary {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.group-button {
+    border-radius: 0;
+    margin-right: -1px;
+}
+
+.group-button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.group-button:last-child {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+}
+
+.loading {
+    background-color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+}
+
+.disabled {
+    background-color: lightgray;
+    border-color: lightgray;
+    cursor: not-allowed;
 }
 
 .menu {
     list-style: none;
-    padding: 0px;
-   
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 li {
     display: inline;
-    border-top: 1px solid white;
+    border-top: 1px solid #444;
     padding: 3px;
-
+    margin: 0 5px;
 }
 
 li:hover {
-    border-top: 1px solid yellow;
+    border-top: 1px solid #007bff;
 }
 
+.toggle-content {
+    margin: 10px 0;
+    color: #444;
+    background-color: #e7f3ff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #b3d1ff;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        display: block;
+        margin: 5px 0;
+    }
+}

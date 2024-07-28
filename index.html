@@ -6,22 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Exercise</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <h1>Buttons exericse</h1>
-<p>
-  <a class="button" href="">I look like a button</a>
-  <button class="button">I'm a real button</button>
-  <a href="">I look like a link</a>
-</p>
+    <div class="container">
+        <h1>Buttons Exercise</h1>
+        <div class="button-section">
+            <div class="button-item">
+                <a class="button primary" href=""><i class="fas fa-check"></i> Primary Button</a>
+                <p>A primary action button.</p>
+            </div>
+            <div class="button-item">
+                <button class="button secondary" onclick="toggleContent()" title="Click to toggle content"><i class="fas fa-sync-alt"></i> Secondary Button</button>
+                <p>A secondary action button.</p>
+            </div>
+            <div id="content" style="display:none;" class="toggle-content">This content is toggled by the button.</div>
+            <div class="button-item">
+                <a class="button danger" href=""><i class="fas fa-exclamation-triangle"></i> Danger Button</a>
+                <p>A button for critical actions.</p>
+            </div>
+            <div class="button-item">
+                <a href="">I look like a link</a>
+                <p>Styled as a link.</p>
+            </div>
+        </div>
 
-<h2>Menu exericse</h2>
-<ul class="menu">
-   <li><a href="">One</a></li>
-   <li><a href="">Two</a></li>
-   <li><a href="">Three</a></li>
-   <li><a href="">Four</a></li>
-   <li><a href="">Five</a></li>
-</ul>
+        <h2>Button Group</h2>
+        <p>
+            The button group below demonstrates how multiple buttons can be arranged together to create a cohesive and unified appearance. This is useful for actions that are related or need to be grouped together for better user experience.
+        </p>
+        <div class="button-group">
+            <button class="button group-button">Left</button>
+            <button class="button group-button">Middle</button>
+            <button class="button group-button">Right</button>
+        </div>
+        <p>
+            Below is an example of a larger button group with additional buttons to show how different actions can be grouped together:
+        </p>
+        <div class="button-group">
+            <button class="button group-button">First</button>
+            <button class="button group-button">Second</button>
+            <button class="button group-button">Third</button>
+            <button class="button group-button">Fourth</button>
+            <button class="button group-button">Fifth</button>
+        </div>
+
+        <div class="button-item">
+            <button class="button loading" disabled><i class="fas fa-spinner fa-spin"></i> Loading...</button>
+            <p>Indicates a loading process.</p>
+        </div>
+        <div class="button-item">
+            <button class="button disabled" disabled title="This button is disabled">Disabled Button</button>
+            <p>A disabled button.</p>
+        </div>
+
+        <h2>Menu Exercise</h2>
+        <p>
+            The menu below showcases a simple horizontal menu. Each menu item changes its border color when hovered over. This section can be further enhanced by adding dropdown functionality to demonstrate more advanced navigation features.
+        </p>
+        <ul class="menu">
+            <li><a href="">One</a></li>
+            <li><a href="">Two</a></li>
+            <li><a href="">Three</a></li>
+            <li><a href="">Four</a></li>
+            <li><a href="">Five</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
